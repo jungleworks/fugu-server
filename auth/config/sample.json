@@ -1,0 +1,55 @@
+{
+"heartbeat" : true,
+"PORT_HTTP":3015,
+"databaseSettings" : {
+"host" : "127.0.0.1",
+"user" : "root",
+"password": "",
+"database": "fugu_auth"
+},
+"logFiles" : {
+"requestLogspath": "../logs/request_logs.log"
+},
+"slaveDatabaseSettings" : {
+"mysqlPORT": "",
+"host" : "127.0.0.1",
+"user" : "root",
+"password": "",
+"database": "fugu_auth"
+},
+"apple": {
+"bundle_id" : [""],
+"client_secret" : "",
+"team_id":""
+},
+"stripeCredentials" : {
+"StripeKey" : "",
+"webhookSecret" : ""
+},
+"emailCredentials":{
+"host": "",
+"port": "",
+"senderEmail": "",
+"senderPassword": "",
+"From": ""
+},
+"apiURL" : "http://auth-api.co/",
+"payUrl" : "",
+"SECRET_API_KEY" : ["c#4ng3T#isS3cR3tK3Y"],
+"facebook": {
+"app_id" : "",
+"app_secret" : ""
+},
+"webhookConfig" : {
+"fuguchat" : {
+"baseUrl" : "http://localhost:3012",
+"secret_key" : "fuguChatSecret"
+}
+},
+"bumbl": {
+"baseUrl": "",
+"apiKey": "",
+"userId": "",
+"offering": "1"
+}
+}

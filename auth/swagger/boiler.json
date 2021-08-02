@@ -1,0 +1,845 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "description": "",
+    "title": "Auth Server"
+  },
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/authenticate_user": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "Email",
+            "name": "email",
+            "in": "formData",
+            "example": "abc@gmail.com",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "Password",
+            "name": "password",
+            "in": "formData",
+            "example": "12345Ab@",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Registration Type",
+            "name": "registration_type",
+            "in": "formData",
+            "example": "1234",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/deduct_individual_payment": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "amount",
+            "name": "amount",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "description",
+            "name": "description",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/get_user_card": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/get_user_detail": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "field_names",
+            "name": "field_names",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "email",
+            "name": "email",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "registration_type",
+            "name": "registration_type",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/jungle/login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "email",
+            "name": "email",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "password",
+            "name": "password",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "workspace",
+            "name": "workspace",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/jungle/registerUser": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "email",
+            "name": "email",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "username",
+            "name": "username",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "first_name",
+            "name": "first_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "last_name",
+            "name": "last_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "password",
+            "name": "password",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "phone",
+            "name": "phone",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "timezone",
+            "name": "timezone",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "country_phone_code",
+            "name": "country_phone_code",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "company_address",
+            "name": "company_address",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "company_latitude",
+            "name": "company_latitude",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "company_longitude",
+            "name": "company_longitude",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "terms_and_conditions",
+            "name": "terms_and_conditions",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "language",
+            "name": "language",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "ipconfig",
+            "name": "ipconfig",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "company_name",
+            "name": "company_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "source",
+            "name": "source",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "medium",
+            "name": "medium",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "business_type",
+            "name": "business_type",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "previous_page",
+            "name": "previous_page",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "referrer",
+            "name": "referrer",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "old_source",
+            "name": "old_source",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "old_medium",
+            "name": "old_medium",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "incomplete",
+            "name": "incomplete",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "vertical",
+            "name": "vertical",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "ad_campaign_name",
+            "name": "ad_campaign_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "vertical_page",
+            "name": "vertical_page",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "gclid",
+            "name": "gclid",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "ctaType",
+            "name": "ctaType",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "utm_term",
+            "name": "utm_term",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "lead_allocation",
+            "name": "lead_allocation",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "utm_campaign",
+            "name": "utm_campaign",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "web_referrer",
+            "name": "web_referrer",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "old_utm_campaign",
+            "name": "old_utm_campaign",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "verification_status",
+            "name": "verification_status",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "custom_fields",
+            "name": "custom_fields",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "dispatcher_user_id",
+            "name": "dispatcher_user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "number",
+            "description": "is_merchant",
+            "name": "is_merchant",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/make_user_payment": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "billing_amount",
+            "name": "billing_amount",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "description",
+            "name": "description",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/update_user_detail": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "updates",
+            "name": "updates",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/add_user_card": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abc@gmail.com",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "12345Ab@",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "stripe_token",
+            "name": "stripe_token ",
+            "in": "formData",
+            "example": "1234",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "source",
+            "name": "source ",
+            "in": "formData",
+            "example": "1234",
+            "required": false
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    },
+    "/jungle/verifyPassword": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "Password",
+            "name": "password",
+            "in": "formData",
+            "example": "w@2Wdsfdf",
+            "required": true
+          },
+          {
+            "type": "string",
+            "description": "Auth Key",
+            "name": "auth_key",
+            "in": "formData",
+            "example": "Key",
+            "required": true
+          },
+          {
+            "type": "number",
+            "description": "Offering",
+            "name": "offering",
+            "in": "formData",
+            "example": "1",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  },
+  "host": "test-api-3098.yelo.red"
+}

@@ -1,0 +1,15 @@
+*node_modules/
+*uploads/
+node_modules/
+test/
+.DS_Store
+npm-debug.log
+docs.html
+.idea/*
+dump.pm2
+package-lock.json
+newrelic_agent.log
+abc.json
+.vscode/settings.json
+configuration/production.json
+configuration/betaproduction.json

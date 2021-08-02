@@ -1,0 +1,11 @@
+{ 
+    "apps" : [{ 
+    "name" : "office_debud", 
+    "script" : "server.js", 
+    "watch" : true, 
+    "env": { 
+    "NODE_ENV": "test" 
+    }, 
+    "node_args" : ["--inspect"] 
+    }] 
+    }

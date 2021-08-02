@@ -1,0 +1,1 @@
+ALTER TABLE `user_details`  ADD `attributes` JSON NULL  AFTER `online_status`;

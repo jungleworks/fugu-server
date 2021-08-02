@@ -1,0 +1,278 @@
+{
+    "path": "/jungle/registerUser",
+    "data": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "email",
+            "name": "email",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "username",
+            "name": "username",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "first_name",
+            "name": "first_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "last_name",
+            "name": "last_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "password",
+            "name": "password",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "phone",
+            "name": "phone",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "number",
+            "description": "timezone",
+            "name": "timezone",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "country_phone_code",
+            "name": "country_phone_code",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "company_address",
+            "name": "company_address",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "company_latitude",
+            "name": "company_latitude",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "company_longitude",
+            "name": "company_longitude",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "number",
+            "description": "terms_and_conditions",
+            "name": "terms_and_conditions",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "language",
+            "name": "language",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "ipconfig",
+            "name": "ipconfig",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "company_name",
+            "name": "company_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "source",
+            "name": "source",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "medium",
+            "name": "medium",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "number",
+            "description": "business_type",
+            "name": "business_type",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "previous_page",
+            "name": "previous_page",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "referrer",
+            "name": "referrer",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "old_source",
+            "name": "old_source",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "old_medium",
+            "name": "old_medium",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "incomplete",
+            "name": "incomplete",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "vertical",
+            "name": "vertical",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "ad_campaign_name",
+            "name": "ad_campaign_name",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "vertical_page",
+            "name": "vertical_page",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "gclid",
+            "name": "gclid",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "ctaType",
+            "name": "ctaType",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "utm_term",
+            "name": "utm_term",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "number",
+            "description": "lead_allocation",
+            "name": "lead_allocation",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "utm_campaign",
+            "name": "utm_campaign",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "web_referrer",
+            "name": "web_referrer",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "old_utm_campaign",
+            "name": "old_utm_campaign",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "number",
+            "description": "verification_status",
+            "name": "verification_status",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "string",
+            "description": "custom_fields",
+            "name": "custom_fields",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "number",
+            "description": "dispatcher_user_id",
+            "name": "dispatcher_user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          },{
+            "type": "number",
+            "description": "is_merchant",
+            "name": "is_merchant",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+{
+  "PORT" : 3004,
+  "MYSQL" : {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database" : "attendance_prod"
+  },
+  "newRelicEnabled" : 0,
+  "fuguEndPoint":"http://localhost:3012",
+  "AWSSettings" : {
+    "accessKey" : "",
+    "secretKey" : "",
+    "bucket"  : "",
+    "region"       : "",
+    "options "     : {
+      "storageType": "STANDARD",
+      "acl"        : "public-read",
+      "checkMD5"   : true
+    }
+  }
+}

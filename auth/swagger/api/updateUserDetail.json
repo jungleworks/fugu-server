@@ -1,0 +1,33 @@
+{
+    "path": "/update_user_detail",
+    "data": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": true
+          },{
+            "type": "string",
+            "description": "updates",
+            "name": "updates",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  }

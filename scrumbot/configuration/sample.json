@@ -1,0 +1,10 @@
+{
+  "PORT" : 3003,
+  "MYSQL" : {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database" : "scrum_prod"
+  },
+  "fuguEndPoint":"http://localhost:3012"
+}

@@ -1,0 +1,50 @@
+{
+    "path": "/add_user_card",
+    "data": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abc@gmail.com",
+            "required":true
+          },
+          {
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "12345Ab@",
+            "required":true
+          },
+          {
+            "type": "string",
+            "description": "stripe_token",
+            "name": "stripe_token ",
+            "in": "formData",
+            "example": "1234",
+            "required":true
+          },
+          {
+            "type": "number",
+            "description": "source",
+            "name": "source ",
+            "in": "formData",
+            "example": "1234",
+            "required":false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  }

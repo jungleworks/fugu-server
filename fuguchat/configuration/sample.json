@@ -1,0 +1,55 @@
+{
+  "PORT": 3012,
+  "MYSQL": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "office_chat_prod"
+  },
+  "SLAVE_MYSQL": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "office_chat_prod"
+  },
+  "newRelicEnabled": 0,
+  "redisServer": "localhost",
+  "elasticServer": "localhost",
+  "baseDomain": "fuguchat.com",
+  "frontEndUrl": "https://open.fuguchat.com",
+  "socketBaseUrl": "https://openapi.fuguchat.com",
+  "ocBaseUrl": "https://openapi.fuguchat.com",
+  "scrumUrl": "http://localhost:3003",
+  "attendanceUrl": "http://localhost:3004",
+  "tookanUrl": "https://api.tookanapp.com/",
+  "authWebhookSecret": "fuguChatSecret",
+  "authServerUrl": "http://localhost:3015",
+  "authKey": "c#4ng3T#isS3cR3tK3Y",
+  "aesKey": "ChangeThisToRandomCharacters",
+  "trelloApiKey": "",
+  "turnApiKey": "SameKeyInConfigAndDB",
+  "junglePaymentUrl": "https://payments.jungleworks.com",
+  "junglePaymentSecretKey": "GetYourOwnSecretKey",
+  "firebaseFcmKey": "GetThisKeyFromFirebaseProjectForPushNotificationsOnWeb",
+  "openApiSecretKey": "ChangeThisSuperSecretKeyToMinimum32Characters",
+  "notificationIssueWebhook": "",
+  "SMSCredentials" : {
+    "Bumbl" : {
+      "userId" : -1,
+      "apiKey" : "",
+      "offering" : -1
+    }
+  },
+  "AWSSettings": {
+    "baseURL": "",
+    "accessKey":  "",
+    "secretKey": "",
+    "region" : "",
+    "awsBucket": "",
+    "options": {
+      "storageType": "STANDARD",
+      "acl": "public-read",
+      "checkMD5": true
+    }
+  }
+}

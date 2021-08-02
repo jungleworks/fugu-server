@@ -1,0 +1,40 @@
+{
+    "path": "/jungle/login",
+    "data": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [
+          {
+            "type": "string",
+            "description": "email",
+            "name": "email",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "password",
+            "name": "password",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "workspace",
+            "name": "workspace",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  }

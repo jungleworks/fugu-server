@@ -1,0 +1,20 @@
+{
+  "razorpay" : {
+    "key_id" : "",
+    "key_secret" : "",
+    "apiBaseUrl" : "https://api.razorpay.com/",
+    "webhookSecret" : ""
+  },
+  "jungleworks_test": {
+    "apiBaseUrl": "",
+    "token": "",
+    "invoiceUrl": "",
+    "signature": ""
+  },
+  "jungleworks_live": {
+    "apiBaseUrl": "",
+    "token": "",
+    "invoiceUrl": "",
+    "signature": ""
+  }
+}

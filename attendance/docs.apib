@@ -1,0 +1,818 @@
+MAT: 1A
+HOST: https://beta-api.fuguchat.com:3000
+
+
+# Fuguchat API Docs
+This [documentation](https://beta.fuguchat.com:3000/documentation) is meant for all the APIs used by the fuguchat agent app, agent panel, widget and website.
+
+
+**Readme**
+
+Please keep these things in mind if you are reading, editing or adding more documentation.
+* This is a reference API made using API Blueprint
+* Please keep the API updated if you are working on this product.
+* Notify the authors if something needs to be edited or anything is wrong
+* Please don't expose the API documentation to an external source, which could lead to breaching
+* :low_brightness: represents mandatory fields
+::: note
+Use **aglio -i docs.apib -o docs.html** to generate updated doc
+:::
+
+# Office Chat APIs
+
+## check Email  [/api/business/checkEmail]
+
+### checkEmail [GET]
+Check Email
+
+Parameters:
+* **email (string)** : email of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+                "email":"puneet@yopmail.com",
+                "app_version":"1.1.1.1",
+                "device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Success",
+                "data": {}
+            }
+
+
+## Business Signup  [/api/business/signup]
+
+### signup [POST]
+Business Signup.
+
+Parameters:
+* **email (string)** : email of a user
+* **domain (string)** : subdomain of that business
+* **business_name (string)** : Business Name of Business
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+                "email":"puneet@yopmail.com",
+                "domain":"jungle",
+                "business_name":"jugnoo",
+                "app_version":"1.1.1.1"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Business SignUp Successfully! Please check you email",
+                "data": {
+                    "email": "puneet@yopmail.com"
+                }
+            }
+
+
+## verify OTP  [/api/business/verifyOtp]
+
+### verifyOtp [POST]
+
+verify OTP
+
+Parameters:
+* **email (string)** : email of a user
+* **otp  (number)** : otp send to user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+                "otp":402715,
+                "email":"qwe@gmail.com",
+                "app_version":"1.1.1",
+                "device_type":"WEB"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Token Verified",
+                "data": {}
+            }
+
+## Set Password  [/api/business/setPassword]
+
+### setPassword [POST]
+
+Set Password
+
+Parameters:
+* **otp  (number)** : otp send to user
+* **password (string)** : password of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"otp":402715,
+            	"password":"qwerty",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Success",
+                "data": {
+                    "access_token": "$2a$10$OGWmUUOxLKOHyPdGuA/CpeKC4wiXIvqDo5qSNf3GrTOT2kSLShfxS"
+                }
+            }
+## getDomains  [/api/business/getDomains]
+
+### getDomains [GET]
+
+get Domains
+
+Parameters:
+* **email (string)** : email of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+                "email":"demo@femo.com",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Success",
+                "data": [
+                    {
+                        "business_id": 3,
+                        "email": "rajatdhamija1@yopmail.com",
+                        "business_name": "jugnoo",
+                        "domain": "clicklabs",
+                        "status": "ENABLED",
+                        "fugu_secret_key": "5cbebea10f23a77fac341a6542d9ae05",
+                        "created_at": "2017-12-28T07:23:05.000Z",
+                        "updated_at": "2017-12-28T07:23:05.000Z"
+                    },
+                    {
+                          "business_id": 5,
+                          "email": "rajatdhamija1@yopmail.com",
+                          "business_name": "jugnoo",
+                          "domain": "clicklabs",
+                          "status": "ENABLED",
+                          "fugu_secret_key": "5cbebea10f23a77fac341a6542d9ae05",
+                          "created_at": "2017-12-28T07:23:05.000Z",
+                          "updated_at": "2017-12-28T07:23:05.000Z"
+                      },
+                      {
+                          "business_id": 3,
+                          "email": "rajatdhamija1@yopmail.com",
+                          "business_name": "jugnoo",
+                          "domain": "clicklabs",
+                          "status": "ENABLED",
+                          "fugu_secret_key": "5cbebea10f23a77fac341a6542d9ae05",
+                          "created_at": "2017-12-28T07:23:05.000Z",
+                          "updated_at": "2017-12-28T07:23:05.000Z"
+                      },
+                      {
+                            "business_id": 5,
+                            "email": "rajatdhamija1@yopmail.com",
+                            "business_name": "jugnoo",
+                            "domain": "clicklabs",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "5cbebea10f23a77fac341a6542d9ae05",
+                            "created_at": "2017-12-28T07:23:05.000Z",
+                            "updated_at": "2017-12-28T07:23:05.000Z"
+                        }
+                ]
+            }
+
+
+## sendDomainsToEmail  [/api/business/sendDomainsToEmail]
+
+### sendDomainsToEmail [GET]
+
+get Domains
+
+Parameters:
+* **email (string)** : email of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+                "email":"demo@femo.com",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Success",
+                "data": {}
+            }
+
+
+
+# Group User APIs
+
+## User Login [/api/user/userLogin]
+
+### userLogin [POST]
+
+user Login
+
+Parameters:
+* **email (string)** : email of a user
+* **domain (string)** : domain in which he wants to login
+* **password (string)** : password of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+* **device_id (string)** : device id which is always unique
+* **device_details (string)** : json of device details
+
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"email":"puneet@yopmail.com",
+            	"domain":"JUGNOO",
+            	"password":"123456",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID",
+            	"token":"qwertyuiwertrtyusdsyuiertyui",
+            	"device_id":"12333333333334567890",
+            	"device_details": {
+            		"version":"1.1.1.1"
+            	}
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Logged In Successfully.",
+                "data": [
+                    {
+                        "access_token": "$2a$10$KOR.zDmaKEBMAaAn1B3KhOxntGpE4Ky2tm7gu2/BR7Iu4aOQ2hOha",
+                        "business_name": "jugnoo",
+                        "doman": "jugnoo",
+                        "user_id": "wzjygmuryV",
+                        "business_id": 1,
+                        "full_name": "puneet",
+                        "email": "puneet@yopmail.com",
+                        "is_admin": true,
+                        "business_email": "puneet@yopmail.com",
+                        "business_status": "ENABLED",
+                        "user_image": "",
+                        "online_status": "ONLINE",
+                        "device_type": "ANDROID",
+                        "token": "qwertyuiwertrtyusdsyuiertyui",
+                        "device_details": "\"{\\\"version\\\":\\\"1.1.1.1\\\"}\"",
+                        "device_id": "12333333333334567890",
+                        "app_secret_key": "693e9af84d3dfcc71e640e005bdc5e2e",
+                        "app_update_message": "SOFT_UPDATE"
+                    }
+                ]
+            }
+
+## User Login Via Access Token [/api/user/loginViaAccessToken]
+
+### loginViaAccessToken [POST]
+
+user Login
+
+Parameters:
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+* **access_token (string)** : access token of particular business
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID",
+                "access_token":"$2a$10$KOR.zDmaKEBMAaAn1B3KhOxntGpE4Ky2tm7gu2/BR7Iu4aOQ2hOha"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Logged In Successfully.",
+                "data": {
+                    "access_token": "$2a$10$mdabm.5/bUWrwv8FnSK8/.2/bODi/ghF4RY0vhYZyzSexUQjBJpBq1",
+                    "business_name": "test",
+                    "domain": "test",
+                    "user_id": "Q6L0AVI6mA",
+                    "business_id": 10,
+                    "full_name": "puneet.kumar",
+                    "email": "puneet.kumar@mail.click-labs.com",
+                    "is_admin": true,
+                    "business_email": "puneet.kumar@mail.click-labs.com",
+                    "business_status": "ENABLED",
+                    "user_image": "",
+                    "online_status": "ONLINE",
+                    "fugu_secret_key": "423f2d21e4df76bfccd33828dc50ec39",
+                    "domains": [
+                        {
+                            "business_id": 1,
+                            "email": "rajat@yopmail.com",
+                            "business_name": "rajat",
+                            "domain": "rajatdhamija",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "70479db59e54cc30bc5715a61ca50136",
+                            "created_at": "2018-01-06T17:33:13.000Z",
+                            "updated_at": "2018-01-06T17:33:13.000Z"
+                        },
+                        {
+                            "business_id": 10,
+                            "email": "puneet.kumar@mail.click-labs.com",
+                            "business_name": "test",
+                            "domain": "test",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "423f2d21e4df76bfccd33828dc50ec39",
+                            "created_at": "2018-01-08T13:13:16.000Z",
+                            "updated_at": "2018-01-08T13:13:17.000Z"
+                        },
+                        {
+                            "business_id": 47,
+                            "email": "achin.sharma+1@mail.click-labs.com",
+                            "business_name": "foo",
+                            "domain": "foo",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "08ec53bb273eb6a769c39465a93800df",
+                            "created_at": "2018-01-10T09:57:57.000Z",
+                            "updated_at": "2018-01-10T09:57:58.000Z"
+                        },
+                        {
+                            "business_id": 54,
+                            "email": "manik.kakkar+54@email.jugnoo.in",
+                            "business_name": "fugu54",
+                            "domain": "fugu54",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "4e932fb53ef98064444c2565221a4709",
+                            "created_at": "2018-01-10T11:11:43.000Z",
+                            "updated_at": "2018-01-10T11:11:44.000Z"
+                        },
+                        {
+                            "business_id": 58,
+                            "email": "amandeep.chauhan@jungleworks.com",
+                            "business_name": "Fugu Team Test",
+                            "domain": "fuguteamtest",
+                            "status": "ENABLED",
+                            "fugu_secret_key": "babce6dd28a7e676798c2c475057cbfa",
+                            "created_at": "2018-01-10T13:04:13.000Z",
+                            "updated_at": "2018-01-10T13:04:13.000Z"
+                        }
+                    ]
+                }
+            }
+
+
+
+## Invite user [/api/user/inviteUser]
+
+
+### inviteUser [POST]
+
+invite User
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **email ( array of string)** : array of email he wants to invite
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (form-data)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$KOR.zDmaKEBMAaAn1B3KhOxntGpE4Ky2tm7gu2/BR7Iu4aOQ2hOha",
+            	"emails":["puneeetKumarPj@yopmail.com"],
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Email Sent.",
+                "data": {
+                    "success": [
+                        "puneeetkumarpj@yopmail.com"
+                    ],
+                    "alreadyRegistered": []
+                }
+            }
+
+
+
+
+## Change password [/api/user/changePassword]
+
+
+### changePassword [POST]
+
+change password
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **new_password (string)** : new password
+* **old_password (string)** : old password
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (form-data)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$KOR.zDmaKEBMAaAn1B3KhOxntGpE4Ky2tm7gu2/BR7Iu4aOQ2hOha",
+            	"new_password":"123456",
+            	"old_password":"qwerty",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 201,
+                "message": "Password Changed Successfully",
+                "data": {
+                    "access_token": "$2a$10$a5ifUaRAx4F1T7czeN5THuqQFFoOeEhEg35OsExAoHLRvTvGbJJF2"
+                }
+            }
+
+
+
+## getUsers [/api/user/getUsers]
+
+### getUsers [GET]
+
+get Users
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **page_start (string)** : page_start of the user list
+* **page_end (string)** : page_end of the user list
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$a5ifUaRAx4F1T7czeN5THuqQFFoOeEhEg35OsExAoHLRvTvGbJJF2",
+            	"app_version":"1.1.1.1",
+            	"page_start" : 0,
+            	"page_end": 25,
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Data Fetched Successfully",
+                "data": {
+                    "users": [
+                        {
+                            "user_id": "pkk5TvPKuJ",
+                            "full_name": "puneeetkumar",
+                            "email": "puneeetkumar@yopmail.com",
+                            "user_image": ""
+                        },
+                        {
+                            "user_id": "WdwKrTlQtT",
+                            "full_name": "puneeetkumarp",
+                            "email": "puneeetkumarp@yopmail.com",
+                            "user_image": ""
+                        },
+                        {
+                            "user_id": "wzjygmuryV",
+                            "full_name": "puneet",
+                            "email": "puneet@yopmail.com",
+                            "user_image": ""
+                        }
+                    ]
+                }
+            }
+
+## Edit User information [/api/user/editUserInfo]
+
+### editUserInfo [POST]
+
+edit Users
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **user_id (string)** : user id of the user
+* **full_name (string)** : full_name of the user
+* **location (string)** : location of the user
+* **designation (string)** : designation of the user
+* **contact_number (number)** : contact_number of the user
+* **department (string)** : department of the user
+* **manager (string)** : manager of the user
+* **status (string)** : ENABLE/DISABLE value
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$qgJln0MXV87nDihzoZw3FeEplTNDwGU28lK.Q43LTVp.U3j56U4ae",
+            	"user_id":"ywGdbPyIDN",
+            	"full_name":"Puneet",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID",
+            	"status":"DISBALED",
+            	"location":"chd"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Edited successfully",
+                "data": {
+
+                }
+            }
+
+
+## Get User Information [/api/user/getUserInfo]
+
+### getUserInfo [GET]
+
+get User Info
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **user_id (string)** : user id of the user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$qgJln0MXV87nDihzoZw3FeEplTNDwGU28lK.Q43LTVp.U3j56U4ae",
+            	"user_id":"ywGdbPyIDN",
+            	"app_version":"1.1.1.1",
+                "device_type":"ANDROID",
+                "status":"DISBALED"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "statusCode": 200,
+              "message": "Email Sent Successfully",
+              "data": {
+                      "user_id": "WdwKrTlQtT",
+                      "full_name": "puneeetkumarp",
+                      "email": "puneeetkumarp@yopmail.com",
+                      "user_image": "",
+                      "status":"ENABLED"
+
+
+                  },
+            }
+
+
+## verify signup token [/api/user/verifySignUpToken]
+
+### verifySignuoToken [GET]
+
+verify Signup Token
+
+Parameters:
+* **signup_token (string)** : signupToken of a user
+* **email (string)** : email id of the user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+* **device_id (string)** : device id which is always unique
+* **device_details (string)** : json of device details
+
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"signup_token":"qwertyuoiuytre",
+            	"email":"hello12345@yopmail.com",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID",
+            	"token":"qwertyuiwertrtyusdsyuiertyui",
+            	"device_id":"12333333333334567890",
+            	"device_details": {
+            		"version":"1.1.1.1"
+            	}
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "statusCode": 200,
+              "message": "Invitation Send",
+              "data": {}
+            }
+
+
+## user logout [/api/user/userLogout]
+
+### userLogout [POST]
+
+user logout
+
+Parameters:
+* **access_token (string)** : access_token of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"access_token":"$2a$10$ACu0G.4N/jEkOXo2uDoFhO8gqqmGwB.t1IEQ0Qs4AQLaw5V61Qie2",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID"
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "statusCode": 200,
+              "message": "Logout SuccessFully",
+              "data": {}
+            }
+
+## verify Email Token [/api/user/verifyToken]
+
+### verifyToken [POST]
+
+verify Email Token
+
+Parameters:
+* **email_token (string)** : access_token of a user
+
++ Request 200 (application/json)
+
+    + Body
+
+            https://localhost:3001/api/user/verifyToken?email_token=07ceb31640569876ab0690616d092471407524b0
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+              "statusCode": 200,
+              "message": "Success",
+              "data": {}
+            }
+
+## Set Password [/api/user/setPassword]
+
+### setPassword [POST]
+
+set Password
+
+Parameters:
+* **email_token (string)** : access_token of a user
+* **password (string)** : password of a user
+* **app_version (string)** : app version of the app
+* **device_type (string)** : device type of source
+* **device_id (string)** : device id which is always unique
+* **device_details (string)** : json of device details
+
++ Request 200 (application/json)
+
+    + Body
+
+            {
+            	"email_token":"15d86285b56cb4108d4554cc789c0c3c9b34d87a",
+            	"password":"qwerty",
+            	"app_version":"1.1.1.1",
+            	"device_type":"ANDROID",
+            	"token":"qwertyuiwertrtyusdsyuiertyui",
+            	"device_id":"1233s333ds3333334567890",
+            	"device_details": {
+            		"version":"1.1.1.1"
+            	}
+            }
+
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "statusCode": 200,
+                "message": "Success",
+                "data": {
+                    "userId": "GHbGmcqGeC",
+                    "businessId": 1,
+                    "email": "puneeetkumarpj@yopmail.com",
+                    "fullName": "puneeetkumarpj",
+                    "password": "d8578edf8458ce06fbc5bb76a58c5ca4",
+                    "access_token": "$2a$10$mkSC6aQpxmEEljyEXwmcZ.hOjSjZ24IzJzCUYQC.aP7JmoDrwtZSq"
+                }
+            }
+
+

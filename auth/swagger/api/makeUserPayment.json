@@ -1,0 +1,46 @@
+{
+    "path": "/make_user_payment",
+    "data": {
+      "post": {
+        "tags": [
+          "Billing"
+        ],
+        "description": "LogIn Panel-In Order to Login Provide Credential which you have used while SignUp",
+        "parameters": [{
+            "type": "string",
+            "description": "access_token",
+            "name": "access_token",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "number",
+            "description": "billing_amount",
+            "name": "billing_amount",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "number",
+            "description": "user_id",
+            "name": "user_id",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":true
+          },{
+            "type": "string",
+            "description": "description",
+            "name": "description",
+            "in": "formData",
+            "example": "abaghdak24h42hjda",
+            "required":false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Output"
+          }
+        }
+      }
+    }
+  }
